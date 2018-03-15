@@ -1,0 +1,18 @@
+.content {
+	color: black;
+	font-size: 30px;
+}
+button {
+	float: right;
+}
+button:hover {
+	opacty:1;
+}
+a {
+	text-decoration: none;
+	color:black;
+}
+a:hover{
+	text-decoration-line: none;
+	color:black;
+}
