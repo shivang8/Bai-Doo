@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- HEADER BEGIN -->
+		<!-- DO NOT DISTURB -->
+		<div class="header">
+          <h1>Welcome to Bai-Doo</h1> 
+        </div>
+
+        <br><br>
+        
+        <div class="topnav">
+				  <a href="Home.html">Home</a>
+				  <a class="active" href="#Service">Services</a>
+				  <a href="#Bai_Portal">Bai-Portal</a>
+				  <a href="#Places">Places</a>
+				  <a href="#about">About</a>
+		</div>
+		<!-- HEADER ENDS-->
+
+		<!-- MY CONTENT BEGIN -->
+		<div>
+			<div class="dropdown">
+				<br>
+				<button onclick="myFunctionTOS()" class="dropbtn">Type of Service <i class="down-arrow"></i>
+				</button>
+			  	<div id="TypeOfService" class="dropdown-content">
+			    	<a href="#">Task 1</a>
+			    	<a href="#">Task 2</a>
+			    	<a href="#">Task 3</a>
+			  	</div>
+			  	<button onclick="myFunctionAge()" class="dropbtn">Age <i class="down-arrow"></i>
+				</button>
+			  	<div id="Age" class="dropdown-content">
+			    	<a href="#">10-17</a>
+			    	<a href="#">18-25</a>
+			    	<a href="#">25-40</a>
+			    	<a href="#">40+</a>
+			  	</div>
+			  	<button onclick="myFunctionGender()" class="dropbtn">Gender <i class="down-arrow"></i>
+				</button>
+			  	<div id="Gender" class="dropdown-content">
+			    	<a href="#">Male</a>
+			    	<a href="#">Female</a>
+			    	<a href="#">Others</a>
+			  	</div>
+			  	<button onclick="myFunctionReligion()" class="dropbtn">Religion <i class="down-arrow"></i>
+				</button>
+			  	<div id="Religion" class="dropdown-content">
+			    	<a href="#">Hindu</a>
+			    	<a href="#">Muslim</a>
+			    	<a href="#">Sikh</a>
+			    	<a href="#">Cristian</a>
+			  	</div>
+			</div>
+		</div>
+		<br><br><br><br><br>
+		<!-- MY CONTENT ENDS -->
+		
+		<!-- FOOTER BEGIN -->
+		<!-- DO NOT DISTURB -->
+		<div class="footer">
+          	<p>&copy 2018</p>
+        </div>
+        <!-- FOOTER ENDS -->
+
+		<script type="text/javascript">
+			/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+			function myFunctionAge() {
+    			document.getElementById("Age").classList.toggle("show");
+			}
+			function myFunctionTOS() {
+    			document.getElementById("TypeOfService").classList.toggle("show");
+			}
+			function myFunctionGender() {
+    			document.getElementById("Gender").classList.toggle("show");
+			}
+			function myFunctionReligion() {
+    			document.getElementById("Religion").classList.toggle("show");
+			}
+
+			// Close the dropdown menu if the user clicks outside of it
+			window.onclick = function(event) {
+			  	if (!event.target.matches('.dropbtn')) 
+			  	{
+			    	var dropdowns = document.getElementsByClassName("dropdown-content");
+			    	var i;
+			    	for (i = 0; i < dropdowns.length; i++) 
+			    	{
+			      		var openDropdown = dropdowns[i];
+			      		if (openDropdown.classList.contains('show')) 
+			      		{
+			        		openDropdown.classList.remove('show');
+			      		}
+			    	}
+			  	}
+			}
+		</script>
+	</body>
+</html>
