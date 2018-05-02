@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE>
 <html>
  	<head>
@@ -6,12 +10,12 @@
 
 		<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+		<meta charset="UTF-8"> 
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
  		<title> About Us</title>
  		<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link rel="stylesheet" href="../css/style.css" />
+    	<link rel="stylesheet" href="/web/css/style.css" />
  		<style type="text/css">
  			h1{ 
  				font-size: 35px;
@@ -42,12 +46,19 @@
         <br><br>
         
         <div class="topnav">
-				  <a href="../index.html">Home</a>
-				  <a href="services.html">Services</a>
-				  <a href="register_page.htm">Bai-Portal</a>
-				  <a href="places.html">Places</a>
-				  <a class="active" href="aboutus.html">About</a>
-				  <a href="login_page.html" style="float: right;">Login</a>
+				  <a href="/web/php/index.php">Home</a>
+				  <a href="/web/php/services.php">Services</a>
+				  <a href="/web/php/register_page.php">Bai-Portal</a>
+				  <a href="/web/php/places.php">Places</a>
+				  <a class="active" href="/web/php/aboutus.php">About</a>
+				  <a href="/web/php/login_page.php" style="float: right;" id="login"><?php
+			        if(isset($_SESSION['username'])) {
+			          echo $_SESSION['username'];
+			        }
+			        else{
+			          echo 'Login';
+			        }
+			        ?></a>
 		</div>
 		<div>
 			<h1>The Bai-Doo Team</h1>
@@ -55,41 +66,46 @@
  		<br>
  		<h2><strong>Members</strong></h2>
  		<div class="hg">
- 			<img src="../collaborators/hardik.png" height="150" width="150">
+ 			<img src="/web/collaborators/hardik.png" height="150" width="150">
  			<p><strong>Hardik Gaur</strong></p>
  			<p>B.tech CSE-CC Graphic Era University</p>
  		</div>
  		<div class="left">
- 			<img src="../collaborators/shivang.jpg" height="150" width="150">
+ 			<img src="/web/collaborators/shivang.jpg" height="150" width="150">
  			<p><strong>Shivang Srivastava (Team Leader)</strong></p>
  			<p>B.tech CSE-CC Graphic Era University</p>
  		</div>
  		<br>
  		<div class="right">
- 			<img src="../collaborators/tj.jpg" height="150" width="150">
+ 			<img src="/web/collaborators/tj.jpg" height="150" width="150">
  			<p><strong>Tanisha Jain</strong></p>
  			<p>B.tech CSE-CC Graphic Era University</p>
  		</div>
  		<div class="left">
- 			<img src="../collaborators/shivani.jpg" height="150" width="150">
+ 			<img src="/web/collaborators/shivani.jpg" height="150" width="150">
  			<p><strong>Shivani Mittal</strong></p>
  			<p>B.tech CSE-CC Graphic Era University</p>
  		</div>
 		
  		<br>
  		<div class="right">
- 			<img src="../collaborators/rajat.jpg" height="150" width="150">
+ 			<img src="/web/collaborators/rajat.jpg" height="150" width="150">
  			<p><strong>Rajat Pandey</strong></p>
  			<p>B.tech CSE-CC Graphic Era University</p>
  		</div>
 
  		<div class="left">
- 			<img src="../collaborators/parth.jpg" height="150" width="150" >
+ 			<img src="/web/collaborators/parth.jpg" height="150" width="150" >
   			<p><strong>Parth Trehan</strong></p>
  			<p>B.tech CSE-CC Graphic Era University</p>
  		</div>
  		<div style="text-align: center;margin-top: 1vw" class="container">
 				<h3>Contact Us</h3>
 			</div>
+			<script type="text/javascript">
+				if(document.getElementById('login').innerHTML != 'Login') {
+				  $('#login').attr('href','/web/php/logout.php');
+				}
+			</script>
  	</body>	
 </html>

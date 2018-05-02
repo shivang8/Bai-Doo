@@ -1,8 +1,12 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Log-in</title>
-		<meta charset="utf-8">
+		<meta charset="UTF-8"> 
 
 		<style type="text/css">
 			.header{
@@ -51,21 +55,21 @@
 		<div class="header">
 			<h1><ins>BAI DOO</ins></h1>			
 		</div>
-		<form>
+		
+		<form action = "/web/php/loginVerify.php" method="POST">
 		<div class="font"> 
 			<!--<img src="16166.jpg" width="150" height="150">-->
 			Username:
-
-			<input type="textbox" name="Login" placeholder="Username or Phone Number" required><br>
+			<input type="textbox" name="Login" placeholder="Phone Number" required><br>
 			Password:
-			<input type="textbox" name="Password" placeholder="Password" required><br>
-			<p><input type="checkbox" name="Remember Me">Remember Me</p>
+			<input type="password" name="Password" placeholder="Password" required><br>
+			<p><input type="checkbox" name="RememberMe">Remember Me</p>
 			<!--<button type="button" name="login">LOG IN</button>-->
 			<br>
-			<button type="submit" class="btn btn-default">Login</button>
+			<input type="submit" class="btn btn-default" value="Login" name="Submit" style="background-color: rgb(84, 190, 124);width: 70%;height: 30px;">
 			<br>
-				<p><a href="register_page.htm" target="_blank">Register</a></p>		
-			<a href="password_reset_link.htm" target="_blank" style="float:right; padding-right:30px;">Forgot Password?</a>
+				<p><a href="/web/php/register_page.php" target="_self">Register</a></p>		
+			<a href="/web/php/password_reset_link.php" target="_self" style="float:right; padding-right:30px;">Forgot Password?</a>
 			<br>
 		</div>
 	</form>

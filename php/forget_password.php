@@ -1,7 +1,11 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
-		
+		<meta charset="UTF-8"> 
 		<title>forget_password</title>
 		<style type="text/css">
 			div{
@@ -34,7 +38,7 @@
 			<input type="textbox" name="Confirm Password" placeholder="Confirm Password" required></p>
 			<button type="Submit" class="btn btn-default">Reset Password</button>
 			<br>
-			<p><a href="login_page.htm" target="_blank">login/register</a></p>
+			<p><a href="/web/php/login_page.php" target="_blank">login/register</a></p>
 			
 		</div>
 		</form>

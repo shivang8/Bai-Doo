@@ -1,6 +1,11 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE>
 <html>
  	<head>
+ 		<meta charset="UTF-8"> 
  		<title> Contact Us</title>
  		<style type="text/css">
  			h1{ 
@@ -23,7 +28,7 @@
  		<h1><strong>Connect With Us</strong></h1>
  		<br>
  		<br>
- 		<img src="../images/baipic.jpg" height:"600" width="400">
+ 		<img src="/web/images/baipic.jpg" height:"600" width="400">
  		<div>
  		<h2><strong>Adress:</strong></h2>
  		<p>Graphic Era University<br>

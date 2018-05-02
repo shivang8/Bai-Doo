@@ -1,6 +1,11 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8"> 
 	<title>forger_password_link</title>
 	<style type="text/css">
 		div{
@@ -32,7 +37,7 @@
 		<p>
 		<button>Reset Password</button>
 		</p>
-		<p  style="text-align: left"><a href="login_page.html" target="_blank">login/register</a></p>
+		<p  style="text-align: left"><a href="/web/php/login_page.php" target="_blank">login/register</a></p>
 	</div>
 	</form>
 </body>
