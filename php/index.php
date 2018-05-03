@@ -39,13 +39,13 @@
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="/web/images/16166.jpg" style="width: 100%">
+  <img src="/web/images/bai.gif" style="width: 100%">
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="/web/images/images.jpg" style="width: 100%">
+  <img src="/web/images/16166.jpg" style="width: 100%">
    <div class="text">Caption Two</div>
 </div>
 
